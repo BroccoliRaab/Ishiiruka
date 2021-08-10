@@ -12,6 +12,7 @@
 #include <string>
 #include <sys/stat.h>
 #include <vector>
+#include <sys/select.h>
 
 #include "Common/FileUtil.h"
 #include "Common/MathUtil.h"
