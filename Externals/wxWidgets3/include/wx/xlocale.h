@@ -285,20 +285,6 @@ extern WXDLLIMPEXP_DATA_BASE(wxXLocale) wxNullXLocale;
         inline wchar_t wxToupper_l(wchar_t c, const wxXLocale& loc)
             { return wxCRT_Toupper_lW(c, loc.Get()); }
 
-
-        // stdlib functions for numeric <-> string conversion
-        // (see notes above about missing functions)
-        #define wxCRT_Strtod_lW wxXLOCALE_IDENT(wcstod_l)
-        #define wxCRT_Strtol_lW wxXLOCALE_IDENT(wcstol_l)
-        #define wxCRT_Strtoul_lW wxXLOCALE_IDENT(wcstoul_l)
-
-        inline double wxStrtod_l(const wchar_t *c, wchar_t **endptr, const wxXLocale& loc)
-            { return wxCRT_Strtod_lW(c, endptr, loc.Get()); }
-        inline long wxStrtol_l(const wchar_t *c, wchar_t **endptr, int base, const wxXLocale& loc)
-            { return wxCRT_Strtol_lW(c, endptr, base, loc.Get()); }
-        inline unsigned long wxStrtoul_l(const wchar_t *c, wchar_t **endptr, int base, const wxXLocale& loc)
-            { return wxCRT_Strtoul_lW(c, endptr, base, loc.Get()); }
-
     #endif // wxUSE_UNICODE
 #else // !wxHAS_XLOCALE_SUPPORT
     // ctype functions
